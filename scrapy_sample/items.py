@@ -9,4 +9,5 @@ class ScrapySampleItem(Item):
     title = Field()
     link = Field()
     content = Field()
+    image = Field() 
     pass

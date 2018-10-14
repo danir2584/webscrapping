@@ -17,6 +17,8 @@ class Tim(CrawlSpider):
         item['title'] = hxs.select("//div[@class='post_block']/div/h2[@id='title']/a/text()").extract()
         item['link'] = hxs.select("//div[@class='post_block']/div/h2[@id='title']/a/@href").extract()
         item['content'] = hxs.select("//div[@class='post_block']/div/div[@class='entry-body']/p/text()").extract()
+        item['image'] = hxs.select("//div[@class='post_block']/div/div[@class='entry-body']/p/image()").extract()
+        
 
         yield item
 
